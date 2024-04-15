@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation System</title>
+    <script>
+        function submitForm() {
+            var user_id = document.getElementById('user_id').value;
+            var action_src = "http://localhost:5000/recommend/" + user_id;
+            var your_form = document.getElementById('recommendForm');
+            your_form.action = action_src;
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter User ID to Get Recommendations</h1>
+    <form id="recommendForm" onsubmit="submitForm()" method="GET">
+        <input type="text" id="user_id" name="user_id" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
