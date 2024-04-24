@@ -7,7 +7,8 @@
     <script>
         function submitForm() {
             var user_id = document.getElementById('user_id').value;
-            var action_src = "http://localhost:5000/recommend/" + user_id;
+            var action_src = "http://localhost:8080/recommend/" + user_id;
+			//var action_src = "https://test-lwbyezyf3a-nn.a.run.app/recommend "+ user_id;
             var your_form = document.getElementById('recommendForm');
             your_form.action = action_src;
         }
